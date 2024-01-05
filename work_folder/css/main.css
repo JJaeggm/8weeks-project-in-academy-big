@@ -1,7 +1,9 @@
 @charset "utf-8";
 
-@import url(./pretendard.css);
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
 
 
@@ -108,13 +110,13 @@ a {text-decoration: none; color: inherit;}
 .depth_4 > li > a:hover {color: #0084ff; border-bottom: 1px solid #0084ff;}
 
 /* search_box 검색창 */
-.search_box {width: 380px; height: 30px; border-radius: 5px; background: #fefffe; border: 1px solid transparent; font-family: pretendard; margin-left: 56px; color: #9a9a9a; transition: all 0.13s;} /* 클릭할 때 value 값은 없어지도록 */
+#searchBox {width: 380px; height: 30px; border-radius: 5px; background: #fefffe; border: 1px solid transparent; font-family: pretendard; margin-left: 56px; padding-left: 10px; transition: all 0.13s; color: #333; font-size: 14px; font-weight: 600; letter-spacing: -0.28px;}
 
-.search_box:hover {outline: 1.5px solid #ABD7FF;}
+#searchBox::placeholder {color: #9a9a9a; font-size: 14px; font-weight: 600; letter-spacing: -0.28px;}
 
-.search_box:focus {outline: 2px solid #bddfff;}
+#searchBox:hover {outline: 1.5px solid #ABD7FF;}
 
-.search_box > p {color: #9a9a9a; font-size: 14px; font-weight: 600; letter-spacing: -0.28;}
+#searchBox:focus {outline: 2px solid #bddfff;}
 
 /* d-day 수능 디데이 */
 .d-day_box {display: flex; margin-left: 62px; width: 120px;padding-top: 1px;}
@@ -368,49 +370,107 @@ box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.40);}
 
 .apps_frame .apps_wrap {width: 305px; height: 612px;}
 
+/* 앱 로고 모음 */
+.apps_frame > a > .smart_learning_app > img {position: absolute; display: block; left: 123px; bottom: 30px; width: 60px; height: 60px; border-radius: 20px; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
+
+.apps_frame a > .integral > img {position: absolute; display: block; left: 123px; bottom: 30px; width: 60px; height: 60px; border-radius: 20px; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
+
+.apps_frame > a > .qube > img {position: absolute; display: block; left: 123px; bottom: 30px; width: 60px; height: 60px; border-radius: 20px; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
+
+.apps_frame > a > .kim_gubsik > img {position: absolute; display: block; left: 123px; bottom: 30px; width: 60px; height: 60px; border-radius: 20px; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
+
+
 /* 스마트러닝앱 */
-.apps_frame .smart_learning_app {position: relative; border-radius: 20px; background: rgba(0, 132, 255, 0.70); box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);}
+.apps_frame > a > .smart_learning_app {position: relative; border-radius: 20px; background: rgba(0, 132, 255, 0.70); box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);}
 
-.apps_frame .smart_learning_app > .apps_text_wrap > p:first-child {padding-top: 112px; color: #FEFFFE; text-align: center; font-size: 16px; font-weight: 400; text-decoration-line: underline;}
+.apps_frame > a > .smart_learning_app > .apps_text_wrap > p:first-child {padding-top: 112px; color: #FEFFFE; text-align: center; font-size: 16px; font-weight: 400; text-decoration-line: underline;}
 
-.apps_frame .smart_learning_app > .apps_text_wrap > p:nth-child(2) {color: #FEFFFE; text-align: center; font-size: 32px; font-weight: 400;}
+.apps_frame > a > .smart_learning_app > .apps_text_wrap > p:nth-child(2) {color: #FEFFFE; text-align: center; font-size: 32px; font-weight: 400;}
 
-.apps_frame .smart_learning_app > .apps_text_wrap > p:nth-child(3) {color: #FEFFFE; text-align: center; font-size: 32px; font-weight: 900; letter-spacing: 1.6px;}
+.apps_frame > a > .smart_learning_app > .apps_text_wrap > p:nth-child(3) {color: #FEFFFE; text-align: center; font-size: 32px; font-weight: 900; letter-spacing: 1.6px;}
 
-.apps_frame .smart_learning_app > .apps_img_wrap > img:first-child {display: block; padding-top: 63px; margin: 0 auto;}
+.apps_frame > a > .smart_learning_app > .apps_img_wrap > img:first-child {display: block; padding-top: 63px; margin: 0 auto;}
 
-.apps_frame .smart_learning_app > .apps_img_wrap > img:nth-child(2) {display: block; margin: 0 auto;}
+.apps_frame > a > .smart_learning_app > .apps_img_wrap > img:nth-child(2) {display: block; margin: 0 auto;}
 
-.apps_frame .smart_learning_app > img {position: absolute; display: block; left: 123px; bottom: 30px; width: 60px; height: 60px; border-radius: 20px; background: url(<path-to-image>), lightgray 50% / cover no-repeat; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
 
 /* 인테그랄 */
-.apps_frame .integral {position: relative; border-radius: 20px; background: #0170E3; box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);}
+.apps_frame a > .integral {position: relative; border-radius: 20px; background: #0170E3; box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);}
 
-.apps_frame .integral > .apps_text_wrap {}
+.apps_frame a > .integral > .apps_text_wrap {}
 
-.apps_frame .integral > .apps_text_wrap > p:first-child {color: #FEFFFE; text-align: center; font-size: 16px; font-weight: 400; letter-spacing: 0.48px; padding-top: 38px;}
+.apps_frame a > .integral > .apps_text_wrap > p:first-child {color: #FEFFFE; text-align: center; font-size: 16px; font-weight: 400; letter-spacing: 0.48px; padding-top: 38px;}
 
-.apps_frame .integral > .apps_text_wrap > p:nth-child(2) {color: #FEFFFE; text-align: center; font-size: 16px; font-weight: 400; letter-spacing: 0.48px;}
+.apps_frame a > .integral > .apps_text_wrap > p:nth-child(2) {color: #FEFFFE; text-align: center; font-size: 16px; font-weight: 400; letter-spacing: 0.48px;}
 
-.apps_frame .integral > .apps_text_wrap > p:nth-child(3) {color: #FFBCB7; text-align: center; font-size: 20px; font-weight: 900; letter-spacing: 0.6px; padding-top: 24px;}
+.apps_frame a > .integral > .apps_text_wrap > p:nth-child(3) {color: #FFBCB7; text-align: center; font-size: 20px; font-weight: 900; letter-spacing: 0.6px; padding-top: 24px;}
 
-.apps_frame .integral > .apps_text_wrap > p:nth-child(4) {color: #FEFFFE; text-align: center; font-family: Quattrocento; font-size: 35px; font-weight: 700; text-transform: uppercase;}
+.apps_frame a > .integral > .apps_text_wrap > p:nth-child(4) {color: #FEFFFE; text-align: center; font-family: Quattrocento; font-size: 35px; font-weight: 700; text-transform: uppercase;}
 
-.apps_frame .integral > .apps_text_wrap > p:nth-child(5) {color: #FEFFFE; text-align: center; font-family: Pretendard; font-size: 16px; font-weight: 300; letter-spacing: 38px; width: 172px; height: 25px; line-height: 25px; border-top: 1px solid #FEFFFE; border-bottom: 1px solid #FEFFFE; box-sizing: border-box; margin: 0 auto; word-break: keep-all;}
+.apps_frame a > .integral > .apps_text_wrap > p:nth-child(5) {color: #FEFFFE; text-align: center; font-family: Pretendard; font-size: 16px; font-weight: 300; letter-spacing: 38px; width: 172px; height: 25px; line-height: 25px; border-top: 1px solid #FEFFFE; border-bottom: 1px solid #FEFFFE; box-sizing: border-box; margin: 0 auto; word-break: keep-all;}
 
-.apps_frame .integral > img {position: absolute; display: block; left: 123px; bottom: 30px; width: 60px; height: 60px; border-radius: 20px; background: url(<path-to-image>), lightgray 50% / cover no-repeat; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
+
+
+/* 인테그랄 말풍선 */
+.text_balloon_wrap {width: 305px; height: 310px; margin: 31px 0;}
+
+.text_balloon {position: relative; width: 262px; height: 70px; margin: 0 auto 10px; border-radius: 10px; background: #fefffe; filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));}
+
+.text_balloon:nth-child(3) {opacity: 0.9;}
+.text_balloon:nth-child(4) {opacity: 0.75;}
+
+.text_balloon p:first-child {width: 242px; padding: 14px 10px 0; font-size: 14px; font-weight: 400; letter-spacing: 0.14px;}
+
+.text_balloon p:last-child {position: absolute; right: 25px; bottom: 5px; color: #555; font-size: 13px; font-weight: 400; letter-spacing: 0.13px;}
 
 
 /* 큐브 qube */
-.apps_frame .qube {position: relative; border-radius: 20px; background: rgba(98, 82, 245, 0.66); box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);}
+.apps_frame > a > .qube {position: relative; border-radius: 20px; background: rgba(98, 82, 245, 0.66); box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);}
 
-.apps_frame .qube > img {position: absolute; display: block; left: 123px; bottom: 30px; width: 60px; height: 60px; border-radius: 20px; background: url(<path-to-image>), lightgray 50% / cover no-repeat; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
+
+.apps_frame > a > .qube > .apps_text_wrap:first-child {width: 305px; padding-top: 58px;}
+
+.apps_frame > a > .qube > .apps_text_wrap:first-child > p {width: 100%; text-align: center;}
+
+.apps_frame > a > .qube > .apps_text_wrap:first-child > p:first-child {color: #222; font-size: 16px; font-weight: 400; letter-spacing: 0.16px;}
+
+.apps_frame > a > .qube > .apps_text_wrap:first-child > p:first-child > span:nth-child(odd) {color: #fefdfe; font-size: 16px; font-weight: 400; letter-spacing: 0.16px;}
+
+.apps_frame > a > .qube > .apps_text_wrap:first-child > p:first-child > span:nth-child(2) {color: #ff959b; font-size: 16px; font-weight: 400; letter-spacing: 0.16px;}
+
+.apps_frame > a > .qube > .apps_text_wrap:first-child > p:nth-child(2) {margin-top: -5px; text-transform: uppercase; font-family: Aldrich; font-size: 63px; color: #fff;}
+
+/* 큐브 모바일 구동 화면 */
+
+.apps_frame > a > .qube > .apps_img_wrap {position: relative; padding-top: 26px;}
+.apps_frame > a > .qube > .apps_img_wrap > img {display: block; margin: 0 auto;}
+
+/* 큐브 메가스터디 수강생 무료 딱지 */
+.apps_frame > a > .qube > .apps_img_wrap > .free_mark {position: absolute; top: 40px; left: 50px; width: 63px; height: 63px; border-radius: 50%; background-color: #3506B0;}
+
+.apps_frame > a > .qube > .apps_img_wrap > .free_mark > p {color: #fff; text-align: center; text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.22); font-family: 'Jua', sans-serif; font-size: 12px; letter-spacing: 0.12px;}
+
+.apps_frame > a > .qube > .apps_img_wrap > .free_mark > p:first-child {padding-top: 13px;}
+
+.apps_frame > a > .qube > .apps_img_wrap > .free_mark > p:last-child {color: #ff959b;}
+
+/* 큐브 두 번째 문단 */
+.apps_frame > a > .qube > .apps_text_wrap_2 > p {text-align: center; padding-top: 5px; color: #fff; font-size: 15px; font-weight: 400; letter-spacing: 0.15px;}
 
 
 /* 김급식 */
-.apps_frame .kim_gubsik {position: relative; border-radius: 20px; background: rgba(254, 108, 21, 0.45); box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);}
+.apps_frame > a > .kim_gubsik {position: relative; border-radius: 20px; background: rgba(254, 108, 21, 0.45); box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);}
 
-.apps_frame .kim_gubsik > img {position: absolute; display: block; left: 123px; bottom: 30px; width: 60px; height: 60px; border-radius: 20px; background: url(<path-to-image>), lightgray 50% / cover no-repeat; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);}
+.apps_text_wrap p:first-child {padding-top: 30px; font-family: 'Jua', sans-serif; text-align: center; font-size: 16px;}
+
+.apps_text_wrap p:last-child {padding-top: 20px; color: #fff; font-family: 'Jua', sans-serif; text-align: center; font-size: 20px; line-height: 1;}
+
+.apps_text_wrap p:last-child > span {color: #111;}
+
+.apps_frame > a > .kim_gubsik > .apps_img_wrap {padding-top: 20px;}
+
+.apps_frame > a > .kim_gubsik > .apps_img_wrap img {display: block; margin: 0 auto;}
+
 
 
 
