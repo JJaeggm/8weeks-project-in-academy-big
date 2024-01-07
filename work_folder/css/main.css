@@ -99,7 +99,7 @@ button {border: none; background: transparent; cursor: pointer;}
 
 
 /* sub_subject_dummy */
-.sub_subject_dummy {height: 10px;}
+.sub_subject_dummy {height: 20px;}
 
 /* _2nd_foreign */
 ._2nd_subject {display: flex; align-items: center; column-gap: 10px; padding: 5px 0 0 20px;}
@@ -140,13 +140,52 @@ button {border: none; background: transparent; cursor: pointer;}
 
 
 /* slide */
-.slide {margin-top: 37px; margin-bottom: 30px; width: 100%; height: 321px; background: #222; box-shadow: 0px 4px 10px 0px rgba(255, 255, 255, 0.20) inset;}
+.slide {margin-top: 37px; width: 100%; height: 321px; background: #222; overflow: hidden;}
+
+.slide_1 > p {padding: 24px 0 0 0; text-align: center; color: #fff; font-size: 28px; font-weight: 300; letter-spacing: -0.56px;}
+
+.slide_1 > p > span:first-child {color: #dc457f;}
+
+.slide_1 > p > span:last-child {color: #45c691;}
+
+.slide_1_wrap {display: flex; justify-content: center;}
+
+/* 필수본 개념완성 영역 */
+.slide_1_wrap .slide_1_left_side {padding: 33px 0 0 0;}
+.slide_1_wrap .slide_1_left_side p:first-child {color: #fff; text-align: center; font-size: 18px; font-weight: 200; line-height: 20px;}
+
+.slide_1_wrap .slide_1_left_side p:first-child > span {color: #d7457c;}
+
+.slide_1_wrap .slide_1_left_side p:nth-child(2) {color: #dc457f; text-align: center;  font-size: 62px; font-weight: 800;}
+
+.slide_1_wrap .slide_1_left_side p:nth-child(3) {color: #fefffe; text-align: center; font-size: 62px; font-weight: 700; margin-top: -10px;}
+
+/* 슬라이드 사진 (배기범) */
+.slide_1_wrap .slide_1_center_pic {}
+.slide_1_wrap .slide_1_center_pic img {display: block; }
+
+/* 3순환 기출특강 영역 */
+.slide_1_wrap .slide_1_right_side {padding: 33px 0 0 0;}
+.slide_1_wrap .slide_1_right_side p:first-child {color: #fff; text-align: center; font-size: 18px; font-weight: 200; line-height: 20px;}
+
+.slide_1_wrap .slide_1_right_side p:first-child > span {color: #46C893;}
+
+.slide_1_wrap .slide_1_right_side p:nth-child(2) {color: #46C893; text-align: center;  font-size: 62px; font-weight: 800;}
+
+.slide_1_wrap .slide_1_right_side p:nth-child(3) {color: #fefffe; text-align: center; font-size: 62px; font-weight: 700; margin-top: -10px;}
+
+
+
 
 /* slide_selector_wrap */
-.slide_selector_wrap {width: 100%;}
+.slide_selector_wrap {width: 100%; margin-top: 30px;}
 
 /* slide_selector */
-.slide_selector {width: 104px; height: 40px; border-radius: 52px; background: #CACACA; margin: 0 auto; filter: drop-shadow(2px 2px 4px rgba(202, 202, 202, 0.60));}
+.slide_selector {display: flex; justify-content: center; align-items: center; gap: 23px; width: 104px; height: 40px; border-radius: 52px; background: #CACACA; margin: 0 auto; filter: drop-shadow(2px 2px 4px rgba(202, 202, 202, 0.60));}
+
+.slide_selector > a {display: block;}
+
+.slide_selector > a > img {display: block;}
 
 /* container */
 .container {/* margin-top: 83px; */}
@@ -509,7 +548,7 @@ box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.40);}
 /* 학습지원센터 삽입 사진 */
 .studying_support_img_wrap {display: flex; gap: 40px; padding-top: 10px;}
 
-.studying_support_img_wrap > div > img {border-radius: 20px;}
+.studying_support_img_wrap > div > img {border-radius: 20px; user-select: none;}
 
 .studying_support_img_wrap > div > img:first-child {display: block; width: 640px; height: 351px; object-fit: cover;}
 
@@ -619,7 +658,7 @@ box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.40);}
 .footer > .inner > .mega_more_site_wrap > li:hover {border-bottom: 1.2px solid #fff;}
 
 /* footer bottom wrap */
-.footer > .inner > .footer_bottom_wrap {display: flex; justify-content: space-between;}
+.footer > .inner > .footer_bottom_wrap {display: flex; justify-content: space-between; height: 160px;}
 
 /* footer left wrap */
 .footer > .inner > .footer_bottom_wrap > .footer_left_wrap {display: flex; gap: 34px; padding: 34px 34px 0;}
